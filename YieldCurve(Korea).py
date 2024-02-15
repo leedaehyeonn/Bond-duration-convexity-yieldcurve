@@ -7,7 +7,7 @@ import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 
-API_KEY = 'QCLR1RPM3SM0CYYA9817'
+API_KEY = ''
 "시장금리 일별: 817Y002[D], 시장금리(월,분기,년): 721Y001[A,M,Q]"
 
 # url = 'https://ecos.bok.or.kr/api/StatisticSearch/' + API_KEY + '/json/kr/1/100/817Y002/D/20221201/20221217'
