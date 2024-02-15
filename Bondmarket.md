@@ -37,15 +37,10 @@ Yield Curve가 평평해지는 현상은 단기금리가 장기금리보다 빠�
 ***
 
 한국은행 금리데이터를 바탕으로 그래프를 그린 결과 2023년 1월 경과 2024년 1월 국채1년 금리가 국채 10년, 20년 금리보다 높은 현상이 보였다.
-<br>
-<div style="text-align: center;">
-  <img src="%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC%ED%86%B5%ED%95%A9.png" alt="국채금리통합" width="100%" height="100%">
-</div>
 
-<div style="text-align: center;">
-  <img src="연도별 장단기금리.png" alt="연도별 장단기금리" width="100%" height="100%">
-</div>
+![국채금리통합](https://github.com/leedaehyeonn/Bond-duration-convexity-yieldcurve/assets/144612668/85bb14f3-2af1-4ce6-bcc5-43221b66713c)
 
+![연도별 장단기금리](https://github.com/leedaehyeonn/Bond-duration-convexity-yieldcurve/assets/144612668/0f46cb37-80a8-4610-bb51-a56b7162d3c4)
 
 ## 결론
 
