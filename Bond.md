@@ -134,10 +134,10 @@ $$
 
 - 두 채권이 다른 모든 조건은 동일하다 가정하고 Convexity만 다를 경우 금리변화에 따른 채권가격의 변화율을 관찰해보자. $X$의 곡률이 $Y$의 곡률보다 크기 때문에, 금리가 상승하든 하락하든 채권 $X$의 가격변화율이 채권 $Y$의 가격변화율보다 항상 유리하다. 즉, 금리 하락으로 인한 가격 상승폭은 더 크고, 금리 상승으로 인한 가격하락의 폭은 더 작다. 또한, Convexity가 큰 채권이라면 Duration만으로 가격변화율을 추정하는데 한계가 있음을 알 수 있다.
 
-<p align="center">
-  <img src="https://github.com/leedaehyeonn/Bond-duration-convexity-yieldcurve/assets/144612668/648eed54-c279-4b68-9b09-da1ca0440351" alt="Convexity">
-</p>
 
+<p align="center">
+  <img src="https://github.com/leedaehyeonn/Bond-duration-convexity-yieldcurve/assets/144612668/648eed54-c279-4b68-9b09-da1ca0440351" alt="Convexity" width="80%" height="80%">
+</p>
 
 Convexity가 큰 채권이란 Duration이 큰 채권과 맥락이 같다. 수식에서 봐도 잔존만기가 길수록, coupon rate이 작을수록, YTM이 작을수록 볼록성이 클 것이다. YTM이 작을수록 볼록성이 크다는 것은, 채권이 비쌀수록 이자율 변동에 유리하다는 것과 같다.
   
