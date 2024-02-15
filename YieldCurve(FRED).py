@@ -6,7 +6,7 @@ import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 
-fp.api_key = 'ab5e65aae554e885f2fc033af16c9884'
+fp.api_key = ''
 
 startdate = "20190101"
 enddate=(dt.now() + timedelta(days=-1)).strftime('%Y-%m-%d')
