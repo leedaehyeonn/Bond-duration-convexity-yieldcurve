@@ -6,8 +6,7 @@
 
 ## Taylor Expansion을 통한 Duration, Convexity 유도
 ---
-Taylor 전개를 통해 함수 $f(x)$를 $x=a$에서 다항함수로 근사시킬 수 있다. 일반적으로 다음과 같이 식 변형이 가능하다.
-
+Taylor 전개를 통해 함수 $f(x)$를 $x=a$에서 다항함수로 근사시킬 수 있다. 일반적으로 다음과 같이 식 변형이 가능하다.<br>
 
 $$
 \begin{aligned}
@@ -25,7 +24,6 @@ f(x^{*}) &\approx \sum_{n=0}^{\infty}\frac{f^{(n)}(x)}{n!}(x^{*}-x)^n \newline
 \end{aligned}
 $$ -->
 
-
 $$
 \begin{aligned}
 f(x+\Delta x) &\approx \sum_{n=0}^{\infty}\frac{f^{(n)}(x)}{n!}(x+\Delta x-x)^n\newline
@@ -36,7 +34,6 @@ $$
 
 채권의 가격을 이자율의 함수 $B(y)$로 가정하고 Taylor Expansion을 이용하면 Duration과 Convexity를 유도할 수 있다.
 
-
 $$
 \begin{aligned}
 B(y+\Delta y) &\approx \sum_{n=0}^{\infty}\frac{B^{(n)}(y)}{n!}(\Delta y)^n\newline
@@ -44,9 +41,7 @@ B(y+\Delta y) &\approx \sum_{n=0}^{\infty}\frac{B^{(n)}(y)}{n!}(\Delta y)^n\newl
 \end{aligned} 
 $$
 
-
-이자율 변동에 따른 채권가격의 변화율로 식을 수정하면 다음과 같다.
-
+이자율 변동에 따른 채권가격의 변화율로 식을 수정하면 다음과 같다.<br>
 
 $$
 \begin{align}
@@ -57,15 +52,12 @@ B(y+\Delta y) -B(y)&\approx B'(y)\Delta y+\frac{B''(y)}{2!}(\Delta y)^2  \nonumb
 \end{align}
 $$
 
-
 ## Duration
 ---
 (1)번 식에서 유도된 Duration은 연속복리든 이산형복리든 만기의 가중평균을 포함한다. Duration 자체가 만기의 가중평균이다. 연속복리의 경우 Duration은 만기의 가중평균 그 자체가 되며, 이산형복리의 경우 만기의 가중평균/(1+y)의 값으로 계산된다. 단순히 이때의 Duration을 Modified Duration이라 한다.
-흔히 Macaulay Duration은 만기의 가중평균이며 Modified Duration을 이자율 민감도로 해석하는 경우가 많은데, 이는 compounding을 이산형으로 적용했을 때의 얘기이며 연속복리라면 Macaulay Duration이 만기의 가중평균이자 이자율 민감도이다.
+흔히 Macaulay Duration은 만기의 가중평균이며 Modified Duration을 이자율 민감도로 해석하는 경우가 많은데, 이는 compounding을 이산형으로 적용했을 때의 얘기이며 연속복리라면 Macaulay Duration이 만기의 가중평균이자 이자율 민감도이다.<br>
 
-
-- $\frac{1}{B}\frac{dB}{dy}$ 에서 B(y)를 연속복리로 compounding 할 경우, 이때 Duration은 만기의 가중평균이다.
-
+- $\frac{1}{B}\frac{dB}{dy}$ 에서 B(y)를 연속복리로 compounding 할 경우, 이때 Duration은 만기의 가중평균이다.<br>
 
 $$
 \begin{aligned}
@@ -76,9 +68,7 @@ B(y) &= \sum_{i=1}^{n}c_ie^{-yt_i}\newline
 \end{aligned}
 $$
 
-
-- $\frac{1}{B}\frac{dB}{dy}$ 에서 B(y)를 이산형복리로 annual compounding 할 경우, 이때 Duration은 만기의 가중평균에 (1+y)를 나눈 값이 되고, 이것을 수정 듀레이션이라 한다.
-
+- $\frac{1}{B}\frac{dB}{dy}$ 에서 B(y)를 이산형복리로 annual compounding 할 경우, 이때 Duration은 만기의 가중평균에 (1+y)를 나눈 값이 되고, 이것을 수정 듀레이션이라 한다.<br>
 
 $$
 \begin{aligned}
@@ -90,9 +80,7 @@ B(y) &= \sum_{i=1}^{n}\frac{c_i}{(1+y)^{t_i}}\newline
 \end{aligned}
 $$
 
-
-- $\frac{1}{B}\frac{dB}{dy}$ 에서 B(y)를 이산형복리로 1년에 m번 compounding 할 경우로 일반화
-
+- $\frac{1}{B}\frac{dB}{dy}$ 에서 B(y)를 이산형복리로 1년에 m번 compounding 할 경우로 일반화<br>
 
 $$
 \begin{aligned}
@@ -104,14 +92,11 @@ B(y) &= \sum_{i=1}^{n}\frac{c_i}{(1+\frac{y}{m})^{mt_i}}\newline
 \end{aligned}
 $$
 
-
 ## Convexity
 ---
 (1)번식에서 유도된 convexity는 연속복리든 이산복리든 듀레이션과 달리 그 자체로 직관적인 의미를 가지지는 않는다. 다만 $\Delta y$의 크기가 크다면 곡률을 고려하여 보다 정확하게 근사시킬 수 있다.
 
-
-- $\frac{1}{B}\frac{d^2B}{dy^2}$에서 B(y)를 연속복리로 compounding 한다고 가정하면
-
+- $\frac{1}{B}\frac{d^2B}{dy^2}$에서 B(y)를 연속복리로 compounding 한다고 가정하면<br>
 
 $$
 \begin{aligned}
@@ -120,9 +105,7 @@ $$
 \end{aligned}
 $$
 
-
-- $\frac{1}{B}\frac{d^2B}{dy^2}$에서 B(y)를 이산형 복리로 compounding 한다고 가정하면
-
+- $\frac{1}{B}\frac{d^2B}{dy^2}$에서 B(y)를 이산형 복리로 compounding 한다고 가정하면<br>
 
 $$
 \begin{aligned}
@@ -131,12 +114,11 @@ $$
 \end{aligned}
 $$
 
-
-- 두 채권이 다른 모든 조건은 동일하다 가정하고 Convexity만 다를 경우 금리변화에 따른 채권가격의 변화율을 관찰해보자. $X$의 곡률이 $Y$의 곡률보다 크기 때문에, 금리가 상승하든 하락하든 채권 $X$의 가격변화율이 채권 $Y$의 가격변화율보다 항상 유리하다. 즉, 금리 하락으로 인한 가격 상승폭은 더 크고, 금리 상승으로 인한 가격하락의 폭은 더 작다. 또한, Convexity가 큰 채권이라면 Duration만으로 가격변화율을 추정하는데 한계가 있음을 알 수 있다.
+- 두 채권이 다른 모든 조건은 동일하다 가정하고 Convexity만 다를 경우 금리변화에 따른 채권가격의 변화율을 관찰해보자. $X$의 곡률이 $Y$의 곡률보다 크기 때문에, 금리가 상승하든 하락하든 채권 $X$의 가격변화율이 채권 $Y$의 가격변화율보다 항상 유리하다. 즉, 금리 하락으로 인한 가격 상승폭은 더 크고, 금리 상승으로 인한 가격하락의 폭은 더 작다. 또한, Convexity가 큰 채권이라면 Duration만으로 가격변화율을 추정하는데 한계가 있음을 알 수 있다.<br>
 
 
 <p align="center">
-  <img src="https://github.com/leedaehyeonn/Bond-duration-convexity-yieldcurve/assets/144612668/648eed54-c279-4b68-9b09-da1ca0440351" alt="Convexity" width="80%" height="80%">
+  <img src="https://github.com/leedaehyeonn/Bond-duration-convexity-yieldcurve/assets/144612668/648eed54-c279-4b68-9b09-da1ca0440351" alt="Convexity" width="50%" height="50%">
 </p>
 
 Convexity가 큰 채권이란 Duration이 큰 채권과 맥락이 같다. 수식에서 봐도 잔존만기가 길수록, coupon rate이 작을수록, YTM이 작을수록 볼록성이 클 것이다. YTM이 작을수록 볼록성이 크다는 것은, 채권이 비쌀수록 이자율 변동에 유리하다는 것과 같다.
