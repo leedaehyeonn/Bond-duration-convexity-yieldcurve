@@ -123,7 +123,6 @@ $$
 
 <p align="center">
   <img src="https://github.com/leedaehyeonn/Bond-duration-convexity-yieldcurve/assets/144612668/648eed54-c279-4b68-9b09-da1ca0440351" alt="Convexity" width="50%" height="50%">
-  <img src="https://github.com/leedaehyeonn/Bond-duration-convexity-yieldcurve/assets/144612668/648eed54-c279-4b68-9b09-da1ca0440351" alt="Convexity" width="50%" height="50%">
 </p>
 
 Convexity가 큰 채권이란 Duration이 큰 채권과 맥락이 같다. 수식에서 봐도 잔존만기가 길수록, coupon rate이 작을수록, YTM이 작을수록 볼록성이 클 것이다. YTM이 작을수록 볼록성이 크다는 것은, 채권이 비쌀수록 이자율 변동에 유리하다는 것과 같다.
