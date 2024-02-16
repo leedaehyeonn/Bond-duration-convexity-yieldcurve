@@ -90,54 +90,84 @@ df5Y = get_daily_yield('010200001', fromdate, todate)
 df10Y = get_daily_yield('010210000', fromdate, todate)
 df20Y = get_daily_yield('010220000', fromdate, todate)  
 
+df = pd.concat([df1Y,df3Y,df5Y,df10Y,df20Y],axis=1)
+df.columns = ['1년', '3년','5년','10년','20년']
 
-"""plot"""
+""""""""""""""""plot"""""""""""""""""
 fig = make_subplots(rows=3, cols=2, 
        subplot_titles=("1년", "3년", "5년", "10년","20년"))
 
-fig.add_trace(
-    go.Scatter(x=df1Y.index, y=df1Y['Yield(%)'], name="국채 1년"),
-    row=1,col=1,
-)
-fig.add_trace(
-    go.Scatter(x=df3Y.index, y=df3Y['Yield(%)'], name="국채 3년"),
-    row=1,col=2,
-)
-fig.add_trace(
-    go.Scatter(x=df5Y.index, y=df5Y['Yield(%)'], name="국채 5년"),
-    row=2,col=1,
-)
-fig.add_trace(
-    go.Scatter(x=df10Y.index, y=df10Y['Yield(%)'], name="국채 10년"),
-    row=2,col=2,
-)
-fig.add_trace(
-    go.Scatter(x=df20Y.index, y=df20Y['Yield(%)'], name="국채 20년"),
-    row=3,col=1,
-)
-
+temp = 0
+for i in range(1,4):
+    for j in range(1,3):
+        column = df.columns[temp]
+        fig.add_trace(
+            go.Scatter(x = df.index, y = df[column], name = column),
+            row=i, col=j)
+        temp += 1
+        if temp >= len(df.columns):
+            break
 fig.update_layout(title_text='한국 장단기 국채', title_x=0.5)
 fig.show()
 
+""""""""""""""""plot"""""""""""""""""
+
+
+# fig.add_trace(
+#     go.Scatter(x=df1Y.index, y=df1Y['Yield(%)'], name="국채 1년"),
+#     row=1,col=1,
+# )
+# fig.add_trace(
+#     go.Scatter(x=df3Y.index, y=df3Y['Yield(%)'], name="국채 3년"),
+#     row=1,col=2,
+# )
+# fig.add_trace(
+#     go.Scatter(x=df5Y.index, y=df5Y['Yield(%)'], name="국채 5년"),
+#     row=2,col=1,
+# )
+# fig.add_trace(
+#     go.Scatter(x=df10Y.index, y=df10Y['Yield(%)'], name="국채 10년"),
+#     row=2,col=2,
+# )
+# fig.add_trace(
+#     go.Scatter(x=df20Y.index, y=df20Y['Yield(%)'], name="국채 20년"),
+#     row=3,col=1,
+# )
+
+# fig.update_layout(title_text='한국 장단기 국채', title_x=0.5)
+# fig.show()
+
+""""""""""""""""plot"""""""""""""""""
+df
 fig = go.Figure()
-fig.add_trace(
-    go.Scatter(x=df1Y.index, y=df1Y['Yield(%)'], name="국채 1년"),
-)
-fig.add_trace(
-    go.Scatter(x=df3Y.index, y=df3Y['Yield(%)'], name="국채 3년"),
-)
-fig.add_trace(
-    go.Scatter(x=df5Y.index, y=df5Y['Yield(%)'], name="국채 5년"),
-)
-fig.add_trace(
-    go.Scatter(x=df10Y.index, y=df10Y['Yield(%)'], name="국채 10년"),
-)
-fig.add_trace(
-    go.Scatter(x=df20Y.index, y=df20Y['Yield(%)'], name="국채 20년"),
-)
 
+for column in df.columns:
+    fig.add_trace(
+        go.Scatter(x = df.index, y = df[column], name = column)
+    )
 fig.update_layout(title_text='한국 장단기 국채', title_x=0.5)
 fig.show()
+""""""""""""""""plot"""""""""""""""""
+
+# fig.add_trace(
+#     go.Scatter(x=df1Y.index, y=df1Y['Yield(%)'], name="국채 1년"),
+# )
+# fig.add_trace(
+#     go.Scatter(x=df3Y.index, y=df3Y['Yield(%)'], name="국채 3년"),
+# )
+# fig.add_trace(
+#     go.Scatter(x=df5Y.index, y=df5Y['Yield(%)'], name="국채 5년"),
+# )
+# fig.add_trace(
+#     go.Scatter(x=df10Y.index, y=df10Y['Yield(%)'], name="국채 10년"),
+# )
+# fig.add_trace(
+#     go.Scatter(x=df20Y.index, y=df20Y['Yield(%)'], name="국채 20년"),
+# )
+
+# fig.update_layout(title_text='한국 장단기 국채', title_x=0.5)
+# fig.show()
+""""""""""""""""plot"""""""""""""""""
 
 
 df = pd.concat([df1Y,df3Y,df5Y,df10Y,df20Y],axis=1)
